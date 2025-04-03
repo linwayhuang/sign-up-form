@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*___________________________________*/
 
+/* Add downloaded font */
 @font-face {
     font-family: norse-bold;
     src: url(./Norse-Bold.otf);
@@ -64,18 +65,21 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .sideBar {
-    --banner-height: 100px; /* Control banner element positions */
+    --banner-height: 200px; /* Control banner element positions */
     position: relative;
     width: 35vw;
+    color: white;
 }
 
 .sideBarImage {
     position: absolute;
     z-index: -1; /* Bring image to back */
-    width: 100%;
+    width: 35vw; /* Keep image 35% viewport width at all time */
+    height: 100vh; /* Keep image full viewport height at all time */
 }
 
 .sideBarForeground {
@@ -87,23 +91,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sideBarBanner {
-    margin-top: 100px;
-    height: var(--banner-height);
+    position: relative;
+    margin-top: 200px;
     width: 100%;
-    background-color: black;
-    opacity: 0.6;
-    color: white;
+    height: var(--banner-height);
     text-align: center;
-    font-size: calc(var(--banner-height) * 1.1);
-    font-family: norse-bold;
+    font-size: calc(var(--banner-height) * 0.8); /* Adjust text size based on variable */
+    font-family: norse-bold; /* Use downloaded font */
+    line-height: 1.23; /* Manually adjust ODIN text vertically. Need to be more dynamic */
     display: flex; /* Make the ODIN text inline with the logo. Don't know why the span element didn't work */
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
-.odinLogo,span {
-    opacity: 0.9;
-    height: 100%;
+.odinLogo,.odin {
+    height: 80%;
+}
+
+.bannerBackground {
+    position: absolute; /* this will make sure bannerBackground always same position as sideBarBanner */
+    z-index: -1;
+    width: 100%;
+    height: var(--banner-height);
+    background-color: black;
+    opacity: 0.6; /* opacity is inherent so it will affect the images and text. So need to create a whole
+    new element just for the banner background */
+}
+
+.sideBarFooter {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-style: oblique;
+}
+
+a:-webkit-any-link {
+    color: white;
+}
+
+a:hover {
+    color: aqua;
+    text-decoration: none;
 }
 
 .content {
