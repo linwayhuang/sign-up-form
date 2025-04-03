@@ -122,9 +122,10 @@ h1, h2, h3, h4, h5, h6 {
 .sideBarFooter {
     margin-bottom: 10px;
     font-size: 1.1rem;
-    font-style: oblique;
+    font-style: italic;
 }
 
+/* Override the purple link color */
 a:-webkit-any-link {
     color: white;
 }
@@ -136,4 +137,19 @@ a:hover {
 
 .content {
     width: 65vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description {
+    height: 30vh;
+}
+
+.inputSpace {
+    height: 30vh;
+}
+
+.footer {
+    height: 30vh;
 }
