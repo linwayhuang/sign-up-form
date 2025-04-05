@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     height: 100vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .sideBar {
@@ -126,8 +126,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Override the purple link color */
-a:-webkit-any-link {
-    color: white;
+.sideBarFooter > a:-webkit-any-link {
+    color:white;
 }
 
 a:hover {
@@ -137,19 +137,99 @@ a:hover {
 
 .content {
     width: 65vw;
+    background-color: #f9fafb;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .description {
-    height: 30vh;
+    height: 35vh;
+    font-weight: bold;
+    font-size: 1.75rem;
+    padding: 120px 80px 30px 60px; /* top left bottom right */
+    line-height: 2.5rem;
+    
+}
+
+.description > p {
+    margin-top: 30px;
 }
 
 .inputSpace {
-    height: 30vh;
+    height: 35vh;
+    padding: 20px 200px 20px 70px;
+    background-color: white;
+    box-shadow: 0 10px 20px grey;
+}
+
+.input {
+    padding: 20px 0;
+}
+
+.form {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    color: #4e5a6a;
+    display: flex;
+    gap: 80px;
+}
+
+.form input { /* Styling the input boxes */
+    display: block; /* Make the input boxes one line below the labels*/
+    margin-bottom: 30px;
+    width: 280px;
+    height: 35px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.form input:focus {
+    border: 2px solid #2050d8;
+    box-shadow: 3px 3px 8px grey;
+    outline: none; /* Remove the blue default outline */
+}
+
+.form input:invalid {
+    border: 2px solid #C23838;
+}
+
+.columnOne,.columnTwo { /* Apply selector combination */
+    width: 50%;
 }
 
 .footer {
     height: 30vh;
+    padding: 40px;
+}
+
+.createAccount {
+    margin-bottom: 25px;
+    width: 250px;
+    height: 60px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: #596D48;
+    border-radius: 10px;
+    border: 1px solid #596D48;
+}
+
+.createAccount:hover {
+    box-shadow: 3px 3px 8px grey;
+    cursor: pointer;
+    transform: scale(1.01); /* Make button bigger */
+}
+
+.otherOpt > a:-webkit-any-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #596D48;
+    text-decoration: none;
+}
+
+.otherOpt > a:hover {
+    cursor: pointer; /* Change cursor */
+    color: purple;
 }
