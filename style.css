@@ -64,22 +64,22 @@ h1, h2, h3, h4, h5, h6 {
 .page {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 685px;
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .sideBar {
-    --banner-height: 200px; /* Control banner element positions */
+    --banner-height: 100px; /* Control banner element positions */
     position: relative;
-    width: 35vw;
+    width: 450px;
     color: white;
 }
 
 .sideBarImage {
     position: absolute;
     z-index: -1; /* Bring image to back */
-    width: 35vw; /* Keep image 35% viewport width at all time */
-    height: 100vh; /* Keep image full viewport height at all time */
+    width: 450px; /* Keep image 35% viewport width at all time */
+    height: 685px; /* Keep image full viewport height at all time */
 }
 
 .sideBarForeground {
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .sideBarBanner {
     position: relative;
-    margin-top: 200px;
+    margin-top: 120px;
     width: 100%;
     height: var(--banner-height);
     text-align: center;
@@ -106,6 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .odinLogo,.odin {
+    z-index: -1;
     height: 80%;
 }
 
@@ -115,13 +116,13 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: var(--banner-height);
     background-color: black;
-    opacity: 0.6; /* opacity is inherent so it will affect the images and text. So need to create a whole
+    opacity: 0.4; /* opacity is inherent so it will affect the images and text. So need to create a whole
     new element just for the banner background */
 }
 
 .sideBarFooter {
     margin-bottom: 10px;
-    font-size: 1.1rem;
+    font-size: 0.6rem;
     font-style: italic;
 }
 
@@ -136,7 +137,7 @@ a:hover {
 }
 
 .content {
-    width: 65vw;
+    width: 830px;
     background-color: #f9fafb;
     display: flex;
     flex-direction: column;
@@ -144,11 +145,11 @@ a:hover {
 }
 
 .description {
-    height: 35vh;
+    height: 240px;
     font-weight: bold;
-    font-size: 1.75rem;
-    padding: 120px 80px 30px 60px; /* top left bottom right */
-    line-height: 2.5rem;
+    font-size: 1.2rem;
+    padding: 60px 210px 10px 40px; /* top left bottom right */
+    line-height: 1.3rem;
     
 }
 
@@ -157,42 +158,42 @@ a:hover {
 }
 
 .inputSpace {
-    height: 35vh;
-    padding: 20px 200px 20px 70px;
+    height: 240px;
+    padding: 15px 210px 20px 40px;
     background-color: white;
     box-shadow: 0 10px 20px grey;
 }
 
 .input {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .form {
-    font-size: 1rem;
+    font-size: 0.65rem;
     font-weight: bold;
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.1rem;
     color: #4e5a6a;
     display: flex;
-    gap: 80px;
+    gap: 70px;
 }
 
 .form input { /* Styling the input boxes */
     display: block; /* Make the input boxes one line below the labels*/
-    margin-bottom: 30px;
-    width: 280px;
-    height: 35px;
-    border: 1px solid grey;
-    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 230px;
+    height: 25px;
+    border: 0.5px solid grey;
+    border-radius: 3px;
 }
 
 .form input:focus {
-    border: 2px solid #2050d8;
+    border: 1px solid #2050d8;
     box-shadow: 3px 3px 8px grey;
     outline: none; /* Remove the blue default outline */
 }
 
 .form input:invalid {
-    border: 2px solid #C23838;
+    border: 1px solid #C23838;
 }
 
 .columnOne,.columnTwo { /* Apply selector combination */
@@ -200,19 +201,19 @@ a:hover {
 }
 
 .footer {
-    height: 30vh;
+    height: 205px;
     padding: 40px;
 }
 
 .createAccount {
     margin-bottom: 25px;
-    width: 250px;
-    height: 60px;
-    font-size: 1.2rem;
+    width: 200px;
+    height: 40px;
+    font-size: 0.9rem;
     font-weight: bold;
     color: white;
     background-color: #596D48;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid #596D48;
 }
 
@@ -223,7 +224,7 @@ a:hover {
 }
 
 .otherOpt > a:-webkit-any-link {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: bold;
     color: #596D48;
     text-decoration: none;
