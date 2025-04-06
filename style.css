@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .odinLogo,.odin {
-    z-index: -1;
+    z-index: -1; /* Avoid overlapping with the right content elements */
     height: 80%;
 }
 
